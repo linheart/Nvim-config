@@ -9,6 +9,7 @@ Includes LSP, autocompletion, formatting, file explorer, fuzzy finder, terminal 
 
 - **Neovim** `>= 0.10.0`
 - **Git**
+- **Npm**
 - [Nerd Font](https://www.nerdfonts.com/font-downloads) (e.g., FiraCode Nerd Font)
 - **Optional external tools** (depending on your language usage):
   - `clang-format`, `stylua`, `isort`, `autopep8`, `pylint`, `prettier`, `eslint_d`, etc.
