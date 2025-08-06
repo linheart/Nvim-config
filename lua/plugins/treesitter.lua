@@ -5,7 +5,7 @@ return {
 	dependencies = {
 		"windwp/nvim-ts-autotag",
 		"JoosepAlviste/nvim-ts-context-commentstring",
-		"HiPhish/nvim-ts-rainbow2",
+		"HiPhish/rainbow-delimiters.nvim",
 	},
 	config = function()
 		vim.g.skip_ts_context_commentstring_module = true
@@ -52,15 +52,18 @@ return {
 					node_decremental = "<bs>",
 				},
 			},
-			rainbow = {
-				enable = true,
-				query = "rainbow-parens",
-				strategy = require("ts-rainbow.strategy.global"),
-			},
-
 			playground = {
 				enable = true,
 			},
 		})
+		local rainbow_delimiters = require("rainbow-delimiters")
+		vim.g.rainbow_delimiters = {
+			strategy = {
+				[""] = rainbow_delimiters.strategy["global"],
+			},
+			query = {
+				[""] = "rainbow-delimiters",
+			},
+		}
 	end,
 }
